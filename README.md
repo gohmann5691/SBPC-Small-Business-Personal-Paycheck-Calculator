@@ -21,3 +21,4 @@ TODO:
 ~implement the execution for quick print in the mainform.cs in a more efficient way(many code clones are being used for the same buttons)
 ~Make the software fulling compatible with any state in the United States by add to the python code and city tax database
 ~add overtime compatiblity and other payroll periods such as biweekly, bimonthly, and monthly(currently only supports weekly)
+****NOTE: MAKE SURE YOU SET THE PaycheckAppUI AS THE STARTUP PROJECT AS THE OTHER PROJECTS ARE LIBRARIES FOR IT.
