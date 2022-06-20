@@ -46,9 +46,10 @@ namespace PaycheckAppUI
             // 
             this.businessLogoInputLabel.AutoSize = true;
             this.businessLogoInputLabel.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.businessLogoInputLabel.Location = new System.Drawing.Point(41, 81);
+            this.businessLogoInputLabel.Location = new System.Drawing.Point(31, 49);
+            this.businessLogoInputLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.businessLogoInputLabel.Name = "businessLogoInputLabel";
-            this.businessLogoInputLabel.Size = new System.Drawing.Size(257, 41);
+            this.businessLogoInputLabel.Size = new System.Drawing.Size(167, 28);
             this.businessLogoInputLabel.TabIndex = 0;
             this.businessLogoInputLabel.Text = "Set Business Logo";
             // 
@@ -56,9 +57,10 @@ namespace PaycheckAppUI
             // 
             this.businessNameLabel.AutoSize = true;
             this.businessNameLabel.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.businessNameLabel.Location = new System.Drawing.Point(30, 132);
+            this.businessNameLabel.Location = new System.Drawing.Point(24, 85);
+            this.businessNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.businessNameLabel.Name = "businessNameLabel";
-            this.businessNameLabel.Size = new System.Drawing.Size(268, 41);
+            this.businessNameLabel.Size = new System.Drawing.Size(174, 28);
             this.businessNameLabel.TabIndex = 1;
             this.businessNameLabel.Text = "Set Business Name";
             // 
@@ -66,72 +68,76 @@ namespace PaycheckAppUI
             // 
             this.shorDescLabel.AutoSize = true;
             this.shorDescLabel.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.shorDescLabel.Location = new System.Drawing.Point(0, 183);
+            this.shorDescLabel.Location = new System.Drawing.Point(0, 121);
+            this.shorDescLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.shorDescLabel.Name = "shorDescLabel";
-            this.shorDescLabel.Size = new System.Drawing.Size(298, 41);
+            this.shorDescLabel.Size = new System.Drawing.Size(198, 28);
             this.shorDescLabel.TabIndex = 2;
             this.shorDescLabel.Text = "Set Short Description";
             // 
             // businessLogoPathInput
             // 
             this.businessLogoPathInput.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.businessLogoPathInput.Location = new System.Drawing.Point(304, 75);
-            this.businessLogoPathInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.businessLogoPathInput.Location = new System.Drawing.Point(203, 49);
+            this.businessLogoPathInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.businessLogoPathInput.Name = "businessLogoPathInput";
-            this.businessLogoPathInput.Size = new System.Drawing.Size(537, 47);
+            this.businessLogoPathInput.Size = new System.Drawing.Size(343, 34);
             this.businessLogoPathInput.TabIndex = 3;
             // 
             // browseButton
             // 
-            this.browseButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.browseButton.Location = new System.Drawing.Point(860, 72);
-            this.browseButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.browseButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.browseButton.Location = new System.Drawing.Point(560, 49);
+            this.browseButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.browseButton.Name = "browseButton";
-            this.browseButton.Size = new System.Drawing.Size(134, 54);
+            this.browseButton.Size = new System.Drawing.Size(100, 32);
             this.browseButton.TabIndex = 4;
             this.browseButton.Text = "Browse";
+            this.browseButton.UseCompatibleTextRendering = true;
             this.browseButton.UseVisualStyleBackColor = true;
             this.browseButton.Click += new System.EventHandler(this.BrowseButton_Click);
             // 
             // setNameInput
             // 
             this.setNameInput.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.setNameInput.Location = new System.Drawing.Point(304, 126);
-            this.setNameInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.setNameInput.Location = new System.Drawing.Point(203, 82);
+            this.setNameInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.setNameInput.Name = "setNameInput";
-            this.setNameInput.Size = new System.Drawing.Size(537, 47);
+            this.setNameInput.Size = new System.Drawing.Size(343, 34);
             this.setNameInput.TabIndex = 5;
             // 
             // shortDescInput
             // 
             this.shortDescInput.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.shortDescInput.Location = new System.Drawing.Point(304, 177);
-            this.shortDescInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.shortDescInput.Location = new System.Drawing.Point(203, 115);
+            this.shortDescInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.shortDescInput.Name = "shortDescInput";
-            this.shortDescInput.Size = new System.Drawing.Size(537, 47);
+            this.shortDescInput.Size = new System.Drawing.Size(343, 34);
             this.shortDescInput.TabIndex = 6;
             // 
             // applyButton
             // 
-            this.applyButton.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.applyButton.Location = new System.Drawing.Point(860, 245);
-            this.applyButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.applyButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applyButton.Location = new System.Drawing.Point(560, 158);
+            this.applyButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(134, 50);
+            this.applyButton.Size = new System.Drawing.Size(100, 32);
             this.applyButton.TabIndex = 7;
             this.applyButton.Text = "Apply";
+            this.applyButton.UseCompatibleTextRendering = true;
             this.applyButton.UseVisualStyleBackColor = true;
             this.applyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.exitButton.Location = new System.Drawing.Point(720, 245);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exitButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Location = new System.Drawing.Point(456, 158);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(134, 50);
+            this.exitButton.Size = new System.Drawing.Size(100, 32);
             this.exitButton.TabIndex = 8;
             this.exitButton.Text = "Exit";
+            this.exitButton.UseCompatibleTextRendering = true;
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
@@ -139,29 +145,31 @@ namespace PaycheckAppUI
             // 
             this.bussTitleConfig.AutoSize = true;
             this.bussTitleConfig.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Underline);
-            this.bussTitleConfig.Location = new System.Drawing.Point(269, 10);
+            this.bussTitleConfig.Location = new System.Drawing.Point(179, 6);
+            this.bussTitleConfig.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bussTitleConfig.Name = "bussTitleConfig";
-            this.bussTitleConfig.Size = new System.Drawing.Size(442, 54);
+            this.bussTitleConfig.Size = new System.Drawing.Size(293, 37);
             this.bussTitleConfig.TabIndex = 9;
             this.bussTitleConfig.Text = "Business Info Configure";
             // 
             // resetBusinessSettButton
             // 
-            this.resetBusinessSettButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.resetBusinessSettButton.Location = new System.Drawing.Point(860, 11);
-            this.resetBusinessSettButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.resetBusinessSettButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetBusinessSettButton.Location = new System.Drawing.Point(560, 6);
+            this.resetBusinessSettButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.resetBusinessSettButton.Name = "resetBusinessSettButton";
-            this.resetBusinessSettButton.Size = new System.Drawing.Size(134, 54);
+            this.resetBusinessSettButton.Size = new System.Drawing.Size(100, 32);
             this.resetBusinessSettButton.TabIndex = 10;
             this.resetBusinessSettButton.Text = "Reset";
+            this.resetBusinessSettButton.UseCompatibleTextRendering = true;
             this.resetBusinessSettButton.UseVisualStyleBackColor = true;
             this.resetBusinessSettButton.Click += new System.EventHandler(this.ResetBusinessSettButton_Click);
             // 
             // BusinessInfoConfig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 307);
+            this.ClientSize = new System.Drawing.Size(671, 200);
             this.Controls.Add(this.resetBusinessSettButton);
             this.Controls.Add(this.bussTitleConfig);
             this.Controls.Add(this.exitButton);
@@ -173,7 +181,7 @@ namespace PaycheckAppUI
             this.Controls.Add(this.shorDescLabel);
             this.Controls.Add(this.businessNameLabel);
             this.Controls.Add(this.businessLogoInputLabel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "BusinessInfoConfig";
             this.Text = "Business Info";
             this.Load += new System.EventHandler(this.BusinessInfoConfig_Load);

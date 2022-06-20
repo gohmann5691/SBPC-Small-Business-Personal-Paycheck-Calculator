@@ -112,7 +112,7 @@ namespace PaycheckOutputAndPrinting
             var lines = rtb.Text.Split('\n');
             foreach (var line in lines)
             {
-                Debug.WriteLine(line);
+                //Debug.WriteLine(line);
                 if (line == "Deductions: ")
                 {
                     var deductionSubtitleFont= FontFactory.GetFont("Segoe UI", 20, iTextSharp.text.Font.UNDERLINE, BaseColor.BLACK);

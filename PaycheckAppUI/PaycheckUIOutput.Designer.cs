@@ -44,7 +44,7 @@ namespace PaycheckAppUI
             // outputText
             // 
             this.outputText.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.outputText.Location = new System.Drawing.Point(11, 207);
+            this.outputText.Location = new System.Drawing.Point(11, 226);
             this.outputText.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.outputText.Name = "outputText";
             this.outputText.Size = new System.Drawing.Size(671, 492);
@@ -53,7 +53,7 @@ namespace PaycheckAppUI
             // 
             // companyLogoBox
             // 
-            this.companyLogoBox.Location = new System.Drawing.Point(14, 34);
+            this.companyLogoBox.Location = new System.Drawing.Point(11, 26);
             this.companyLogoBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.companyLogoBox.Name = "companyLogoBox";
             this.companyLogoBox.Size = new System.Drawing.Size(197, 170);
@@ -74,23 +74,26 @@ namespace PaycheckAppUI
             // 
             // printButton
             // 
-            this.printButton.Location = new System.Drawing.Point(571, 10);
+            this.printButton.Location = new System.Drawing.Point(551, 10);
             this.printButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.printButton.Name = "printButton";
-            this.printButton.Size = new System.Drawing.Size(111, 33);
+            this.printButton.Size = new System.Drawing.Size(131, 33);
             this.printButton.TabIndex = 3;
             this.printButton.Text = "Print Paycheck";
+            this.printButton.UseCompatibleTextRendering = true;
             this.printButton.UseVisualStyleBackColor = true;
             this.printButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(571, 47);
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.saveButton.Location = new System.Drawing.Point(551, 47);
             this.saveButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(111, 33);
+            this.saveButton.Size = new System.Drawing.Size(131, 33);
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Save Paycheck Only";
+            this.saveButton.UseCompatibleTextRendering = true;
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveOnlyButon_Click);
             // 
@@ -118,7 +121,7 @@ namespace PaycheckAppUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 709);
+            this.ClientSize = new System.Drawing.Size(693, 728);
             this.Controls.Add(this.numericPrinterCopies);
             this.Controls.Add(this.copiesLabel);
             this.Controls.Add(this.saveButton);

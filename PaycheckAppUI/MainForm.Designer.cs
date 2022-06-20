@@ -272,7 +272,7 @@ namespace PaycheckAppUI
             // 
             this.zipCodeLabel.AutoSize = true;
             this.zipCodeLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.zipCodeLabel.Location = new System.Drawing.Point(105, 269);
+            this.zipCodeLabel.Location = new System.Drawing.Point(105, 271);
             this.zipCodeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.zipCodeLabel.Name = "zipCodeLabel";
             this.zipCodeLabel.Size = new System.Drawing.Size(88, 25);
@@ -283,7 +283,7 @@ namespace PaycheckAppUI
             // 
             this.fedAllowancesLabel.AutoSize = true;
             this.fedAllowancesLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.fedAllowancesLabel.Location = new System.Drawing.Point(21, 299);
+            this.fedAllowancesLabel.Location = new System.Drawing.Point(21, 303);
             this.fedAllowancesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fedAllowancesLabel.Name = "fedAllowancesLabel";
             this.fedAllowancesLabel.Size = new System.Drawing.Size(174, 25);
@@ -293,7 +293,7 @@ namespace PaycheckAppUI
             // checkNumberInput
             // 
             this.checkNumberInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.checkNumberInput.Location = new System.Drawing.Point(195, 239);
+            this.checkNumberInput.Location = new System.Drawing.Point(195, 240);
             this.checkNumberInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.checkNumberInput.Maximum = new decimal(new int[] {
             1316134911,
@@ -309,7 +309,7 @@ namespace PaycheckAppUI
             // 
             this.checkNumberLabel.AutoSize = true;
             this.checkNumberLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.checkNumberLabel.Location = new System.Drawing.Point(56, 240);
+            this.checkNumberLabel.Location = new System.Drawing.Point(56, 241);
             this.checkNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.checkNumberLabel.Name = "checkNumberLabel";
             this.checkNumberLabel.Size = new System.Drawing.Size(137, 25);
@@ -332,7 +332,7 @@ namespace PaycheckAppUI
             // 
             this.stateAllowanceLabel.AutoSize = true;
             this.stateAllowanceLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.stateAllowanceLabel.Location = new System.Drawing.Point(41, 328);
+            this.stateAllowanceLabel.Location = new System.Drawing.Point(41, 334);
             this.stateAllowanceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.stateAllowanceLabel.Name = "stateAllowanceLabel";
             this.stateAllowanceLabel.Size = new System.Drawing.Size(153, 25);
@@ -342,7 +342,7 @@ namespace PaycheckAppUI
             // ZipCodeTextBox
             // 
             this.ZipCodeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ZipCodeTextBox.Location = new System.Drawing.Point(195, 269);
+            this.ZipCodeTextBox.Location = new System.Drawing.Point(195, 271);
             this.ZipCodeTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.ZipCodeTextBox.Name = "ZipCodeTextBox";
             this.ZipCodeTextBox.Size = new System.Drawing.Size(120, 29);
@@ -351,7 +351,7 @@ namespace PaycheckAppUI
             // FederalAllowanceInput
             // 
             this.FederalAllowanceInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.FederalAllowanceInput.Location = new System.Drawing.Point(195, 298);
+            this.FederalAllowanceInput.Location = new System.Drawing.Point(195, 302);
             this.FederalAllowanceInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.FederalAllowanceInput.Name = "FederalAllowanceInput";
             this.FederalAllowanceInput.Size = new System.Drawing.Size(33, 29);
@@ -360,7 +360,7 @@ namespace PaycheckAppUI
             // StateAllowanceInput
             // 
             this.StateAllowanceInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.StateAllowanceInput.Location = new System.Drawing.Point(195, 327);
+            this.StateAllowanceInput.Location = new System.Drawing.Point(195, 333);
             this.StateAllowanceInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.StateAllowanceInput.Name = "StateAllowanceInput";
             this.StateAllowanceInput.Size = new System.Drawing.Size(33, 29);
