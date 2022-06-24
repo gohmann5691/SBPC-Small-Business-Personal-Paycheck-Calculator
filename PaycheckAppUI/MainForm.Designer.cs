@@ -72,6 +72,7 @@ namespace PaycheckAppUI
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -79,8 +80,8 @@ namespace PaycheckAppUI
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(609, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(914, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,15 +91,14 @@ namespace PaycheckAppUI
             this.completePaycheckToolStripMenuItem,
             this.printAndCompletePaycheckToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click_1);
             // 
             // completePaycheckToolStripMenuItem
             // 
             this.completePaycheckToolStripMenuItem.Name = "completePaycheckToolStripMenuItem";
             this.completePaycheckToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.completePaycheckToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.completePaycheckToolStripMenuItem.Size = new System.Drawing.Size(407, 34);
             this.completePaycheckToolStripMenuItem.Text = "Complete Paycheck";
             this.completePaycheckToolStripMenuItem.Click += new System.EventHandler(this.completePaycheckToolStripMenuItem_Click);
             // 
@@ -106,7 +106,7 @@ namespace PaycheckAppUI
             // 
             this.printAndCompletePaycheckToolStripMenuItem.Name = "printAndCompletePaycheckToolStripMenuItem";
             this.printAndCompletePaycheckToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printAndCompletePaycheckToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.printAndCompletePaycheckToolStripMenuItem.Size = new System.Drawing.Size(407, 34);
             this.printAndCompletePaycheckToolStripMenuItem.Text = "Print And Complete Paycheck";
             this.printAndCompletePaycheckToolStripMenuItem.Click += new System.EventHandler(this.printAndCompletePaycheckToolStripMenuItem_Click);
             // 
@@ -116,20 +116,20 @@ namespace PaycheckAppUI
             this.addBusinessInfoToolStripMenuItem,
             this.configureToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(92, 29);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
             // addBusinessInfoToolStripMenuItem
             // 
             this.addBusinessInfoToolStripMenuItem.Name = "addBusinessInfoToolStripMenuItem";
-            this.addBusinessInfoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.addBusinessInfoToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.addBusinessInfoToolStripMenuItem.Text = "Add Business Info";
             this.addBusinessInfoToolStripMenuItem.Click += new System.EventHandler(this.addBusinessInfoToolStripMenuItem_Click);
             // 
             // configureToolStripMenuItem
             // 
             this.configureToolStripMenuItem.Name = "configureToolStripMenuItem";
-            this.configureToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.configureToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.configureToolStripMenuItem.Text = "Configure";
             this.configureToolStripMenuItem.Click += new System.EventHandler(this.configureToolStripMenuItem_Click);
             // 
@@ -139,21 +139,20 @@ namespace PaycheckAppUI
             this.helpToolStripMenuItem,
             this.licenseToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.aboutToolStripMenuItem.Text = "Help";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.helpToolStripMenuItem.Text = "About";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // licenseToolStripMenuItem
             // 
             this.licenseToolStripMenuItem.Name = "licenseToolStripMenuItem";
-            this.licenseToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.licenseToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.licenseToolStripMenuItem.Text = "License";
             this.licenseToolStripMenuItem.Click += new System.EventHandler(this.licenseToolStripMenuItem_Click);
             // 
@@ -161,10 +160,9 @@ namespace PaycheckAppUI
             // 
             this.TitleOfApplication.AutoSize = true;
             this.TitleOfApplication.Font = new System.Drawing.Font("Lucida Console", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.TitleOfApplication.Location = new System.Drawing.Point(5, 35);
-            this.TitleOfApplication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TitleOfApplication.Location = new System.Drawing.Point(8, 52);
             this.TitleOfApplication.Name = "TitleOfApplication";
-            this.TitleOfApplication.Size = new System.Drawing.Size(414, 34);
+            this.TitleOfApplication.Size = new System.Drawing.Size(611, 50);
             this.TitleOfApplication.TabIndex = 1;
             this.TitleOfApplication.Text = "Paycheck Calculator";
             // 
@@ -172,10 +170,9 @@ namespace PaycheckAppUI
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.nameLabel.Location = new System.Drawing.Point(6, 101);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameLabel.Location = new System.Drawing.Point(9, 152);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(189, 25);
+            this.nameLabel.Size = new System.Drawing.Size(280, 38);
             this.nameLabel.TabIndex = 3;
             this.nameLabel.Text = "Empolyee First Name";
             // 
@@ -183,10 +180,9 @@ namespace PaycheckAppUI
             // 
             this.name2Label.AutoSize = true;
             this.name2Label.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.name2Label.Location = new System.Drawing.Point(9, 138);
-            this.name2Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.name2Label.Location = new System.Drawing.Point(14, 207);
             this.name2Label.Name = "name2Label";
-            this.name2Label.Size = new System.Drawing.Size(187, 25);
+            this.name2Label.Size = new System.Drawing.Size(276, 38);
             this.name2Label.TabIndex = 7;
             this.name2Label.Text = "Empolyee Last Name";
             // 
@@ -194,10 +190,9 @@ namespace PaycheckAppUI
             // 
             this.HouryWageOrSalaryLabel.AutoSize = true;
             this.HouryWageOrSalaryLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.HouryWageOrSalaryLabel.Location = new System.Drawing.Point(76, 173);
-            this.HouryWageOrSalaryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.HouryWageOrSalaryLabel.Location = new System.Drawing.Point(114, 260);
             this.HouryWageOrSalaryLabel.Name = "HouryWageOrSalaryLabel";
-            this.HouryWageOrSalaryLabel.Size = new System.Drawing.Size(121, 25);
+            this.HouryWageOrSalaryLabel.Size = new System.Drawing.Size(178, 38);
             this.HouryWageOrSalaryLabel.TabIndex = 9;
             this.HouryWageOrSalaryLabel.Text = "Hourly Wage";
             // 
@@ -205,10 +200,9 @@ namespace PaycheckAppUI
             // 
             this.hoursWorkedLabel.AutoSize = true;
             this.hoursWorkedLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.hoursWorkedLabel.Location = new System.Drawing.Point(65, 209);
-            this.hoursWorkedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hoursWorkedLabel.Location = new System.Drawing.Point(98, 314);
             this.hoursWorkedLabel.Name = "hoursWorkedLabel";
-            this.hoursWorkedLabel.Size = new System.Drawing.Size(132, 25);
+            this.hoursWorkedLabel.Size = new System.Drawing.Size(195, 38);
             this.hoursWorkedLabel.TabIndex = 11;
             this.hoursWorkedLabel.Text = "Hours Worked";
             // 
@@ -216,66 +210,64 @@ namespace PaycheckAppUI
             // 
             this.dateLabel.AutoSize = true;
             this.dateLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dateLabel.Location = new System.Drawing.Point(61, 69);
-            this.dateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dateLabel.Location = new System.Drawing.Point(92, 104);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(133, 25);
+            this.dateLabel.Size = new System.Drawing.Size(197, 38);
             this.dateLabel.TabIndex = 15;
             this.dateLabel.Text = "Paycheck Date";
             // 
             // paycheckDateInput
             // 
             this.paycheckDateInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.paycheckDateInput.Location = new System.Drawing.Point(195, 68);
-            this.paycheckDateInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.paycheckDateInput.Location = new System.Drawing.Point(292, 102);
+            this.paycheckDateInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.paycheckDateInput.Name = "paycheckDateInput";
-            this.paycheckDateInput.Size = new System.Drawing.Size(275, 29);
+            this.paycheckDateInput.Size = new System.Drawing.Size(410, 39);
             this.paycheckDateInput.TabIndex = 16;
             // 
             // firstNameInput
             // 
             this.firstNameInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.firstNameInput.Location = new System.Drawing.Point(195, 101);
-            this.firstNameInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.firstNameInput.Location = new System.Drawing.Point(292, 152);
+            this.firstNameInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.firstNameInput.Name = "firstNameInput";
-            this.firstNameInput.Size = new System.Drawing.Size(275, 29);
+            this.firstNameInput.Size = new System.Drawing.Size(410, 39);
             this.firstNameInput.TabIndex = 17;
             // 
             // lastNameInput
             // 
             this.lastNameInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lastNameInput.Location = new System.Drawing.Point(195, 137);
-            this.lastNameInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.lastNameInput.Location = new System.Drawing.Point(292, 206);
+            this.lastNameInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lastNameInput.Name = "lastNameInput";
-            this.lastNameInput.Size = new System.Drawing.Size(275, 29);
+            this.lastNameInput.Size = new System.Drawing.Size(410, 39);
             this.lastNameInput.TabIndex = 18;
             // 
             // hourlyWageInput
             // 
             this.hourlyWageInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hourlyWageInput.Location = new System.Drawing.Point(195, 173);
-            this.hourlyWageInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.hourlyWageInput.Location = new System.Drawing.Point(292, 260);
+            this.hourlyWageInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.hourlyWageInput.Name = "hourlyWageInput";
-            this.hourlyWageInput.Size = new System.Drawing.Size(275, 29);
+            this.hourlyWageInput.Size = new System.Drawing.Size(410, 39);
             this.hourlyWageInput.TabIndex = 19;
             // 
             // HoursWorkedTextBox
             // 
             this.HoursWorkedTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.HoursWorkedTextBox.Location = new System.Drawing.Point(195, 209);
-            this.HoursWorkedTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.HoursWorkedTextBox.Location = new System.Drawing.Point(292, 314);
+            this.HoursWorkedTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HoursWorkedTextBox.Name = "HoursWorkedTextBox";
-            this.HoursWorkedTextBox.Size = new System.Drawing.Size(275, 29);
+            this.HoursWorkedTextBox.Size = new System.Drawing.Size(410, 39);
             this.HoursWorkedTextBox.TabIndex = 20;
             // 
             // zipCodeLabel
             // 
             this.zipCodeLabel.AutoSize = true;
             this.zipCodeLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.zipCodeLabel.Location = new System.Drawing.Point(105, 271);
-            this.zipCodeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.zipCodeLabel.Location = new System.Drawing.Point(158, 406);
             this.zipCodeLabel.Name = "zipCodeLabel";
-            this.zipCodeLabel.Size = new System.Drawing.Size(88, 25);
+            this.zipCodeLabel.Size = new System.Drawing.Size(128, 38);
             this.zipCodeLabel.TabIndex = 21;
             this.zipCodeLabel.Text = "Zip Code";
             // 
@@ -283,25 +275,24 @@ namespace PaycheckAppUI
             // 
             this.fedAllowancesLabel.AutoSize = true;
             this.fedAllowancesLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.fedAllowancesLabel.Location = new System.Drawing.Point(21, 303);
-            this.fedAllowancesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fedAllowancesLabel.Location = new System.Drawing.Point(32, 454);
             this.fedAllowancesLabel.Name = "fedAllowancesLabel";
-            this.fedAllowancesLabel.Size = new System.Drawing.Size(174, 25);
+            this.fedAllowancesLabel.Size = new System.Drawing.Size(254, 38);
             this.fedAllowancesLabel.TabIndex = 22;
             this.fedAllowancesLabel.Text = "Federal Allowances";
             // 
             // checkNumberInput
             // 
             this.checkNumberInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.checkNumberInput.Location = new System.Drawing.Point(195, 240);
-            this.checkNumberInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.checkNumberInput.Location = new System.Drawing.Point(292, 360);
+            this.checkNumberInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkNumberInput.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
             this.checkNumberInput.Name = "checkNumberInput";
-            this.checkNumberInput.Size = new System.Drawing.Size(118, 29);
+            this.checkNumberInput.Size = new System.Drawing.Size(177, 39);
             this.checkNumberInput.TabIndex = 23;
             this.checkNumberInput.Click += new System.EventHandler(this.checkNumberInput_Click);
             // 
@@ -309,20 +300,19 @@ namespace PaycheckAppUI
             // 
             this.checkNumberLabel.AutoSize = true;
             this.checkNumberLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.checkNumberLabel.Location = new System.Drawing.Point(56, 241);
-            this.checkNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.checkNumberLabel.Location = new System.Drawing.Point(84, 362);
             this.checkNumberLabel.Name = "checkNumberLabel";
-            this.checkNumberLabel.Size = new System.Drawing.Size(137, 25);
+            this.checkNumberLabel.Size = new System.Drawing.Size(202, 38);
             this.checkNumberLabel.TabIndex = 26;
             this.checkNumberLabel.Text = "Check Number";
             // 
             // CalculatePaycheckButton
             // 
             this.CalculatePaycheckButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CalculatePaycheckButton.Location = new System.Drawing.Point(427, 328);
-            this.CalculatePaycheckButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.CalculatePaycheckButton.Location = new System.Drawing.Point(640, 492);
+            this.CalculatePaycheckButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CalculatePaycheckButton.Name = "CalculatePaycheckButton";
-            this.CalculatePaycheckButton.Size = new System.Drawing.Size(175, 33);
+            this.CalculatePaycheckButton.Size = new System.Drawing.Size(262, 50);
             this.CalculatePaycheckButton.TabIndex = 40;
             this.CalculatePaycheckButton.Text = "Calculate Paycheck";
             this.CalculatePaycheckButton.UseVisualStyleBackColor = true;
@@ -332,48 +322,47 @@ namespace PaycheckAppUI
             // 
             this.stateAllowanceLabel.AutoSize = true;
             this.stateAllowanceLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.stateAllowanceLabel.Location = new System.Drawing.Point(41, 334);
-            this.stateAllowanceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.stateAllowanceLabel.Location = new System.Drawing.Point(62, 501);
             this.stateAllowanceLabel.Name = "stateAllowanceLabel";
-            this.stateAllowanceLabel.Size = new System.Drawing.Size(153, 25);
+            this.stateAllowanceLabel.Size = new System.Drawing.Size(224, 38);
             this.stateAllowanceLabel.TabIndex = 30;
             this.stateAllowanceLabel.Text = "State Allowances";
             // 
             // ZipCodeTextBox
             // 
             this.ZipCodeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ZipCodeTextBox.Location = new System.Drawing.Point(195, 271);
-            this.ZipCodeTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.ZipCodeTextBox.Location = new System.Drawing.Point(292, 406);
+            this.ZipCodeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ZipCodeTextBox.Name = "ZipCodeTextBox";
-            this.ZipCodeTextBox.Size = new System.Drawing.Size(120, 29);
+            this.ZipCodeTextBox.Size = new System.Drawing.Size(178, 39);
             this.ZipCodeTextBox.TabIndex = 31;
             // 
             // FederalAllowanceInput
             // 
             this.FederalAllowanceInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.FederalAllowanceInput.Location = new System.Drawing.Point(195, 302);
-            this.FederalAllowanceInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.FederalAllowanceInput.Location = new System.Drawing.Point(292, 453);
+            this.FederalAllowanceInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FederalAllowanceInput.Name = "FederalAllowanceInput";
-            this.FederalAllowanceInput.Size = new System.Drawing.Size(33, 29);
+            this.FederalAllowanceInput.Size = new System.Drawing.Size(50, 39);
             this.FederalAllowanceInput.TabIndex = 33;
             // 
             // StateAllowanceInput
             // 
             this.StateAllowanceInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.StateAllowanceInput.Location = new System.Drawing.Point(195, 333);
-            this.StateAllowanceInput.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.StateAllowanceInput.Location = new System.Drawing.Point(292, 500);
+            this.StateAllowanceInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StateAllowanceInput.Name = "StateAllowanceInput";
-            this.StateAllowanceInput.Size = new System.Drawing.Size(33, 29);
+            this.StateAllowanceInput.Size = new System.Drawing.Size(50, 39);
             this.StateAllowanceInput.TabIndex = 34;
             // 
             // EmployerOrEmployee
             // 
             this.EmployerOrEmployee.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.EmployerOrEmployee.FormattingEnabled = true;
-            this.EmployerOrEmployee.Location = new System.Drawing.Point(481, 100);
-            this.EmployerOrEmployee.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.EmployerOrEmployee.Location = new System.Drawing.Point(722, 150);
+            this.EmployerOrEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmployerOrEmployee.Name = "EmployerOrEmployee";
-            this.EmployerOrEmployee.Size = new System.Drawing.Size(111, 29);
+            this.EmployerOrEmployee.Size = new System.Drawing.Size(164, 40);
             this.EmployerOrEmployee.TabIndex = 35;
             this.EmployerOrEmployee.SelectedIndexChanged += new System.EventHandler(this.EmployerOrEmployee_SelectedIndexChanged);
             // 
@@ -381,18 +370,18 @@ namespace PaycheckAppUI
             // 
             this.HourlyOrSalaried.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.HourlyOrSalaried.FormattingEnabled = true;
-            this.HourlyOrSalaried.Location = new System.Drawing.Point(481, 172);
-            this.HourlyOrSalaried.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.HourlyOrSalaried.Location = new System.Drawing.Point(722, 258);
+            this.HourlyOrSalaried.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HourlyOrSalaried.Name = "HourlyOrSalaried";
-            this.HourlyOrSalaried.Size = new System.Drawing.Size(111, 29);
+            this.HourlyOrSalaried.Size = new System.Drawing.Size(164, 40);
             this.HourlyOrSalaried.TabIndex = 36;
             this.HourlyOrSalaried.SelectedIndexChanged += new System.EventHandler(this.HourlyOrSalaried_SelectedIndexChanged);
             // 
             // PaycheckCalcMainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(609, 369);
+            this.ClientSize = new System.Drawing.Size(914, 554);
             this.Controls.Add(this.HourlyOrSalaried);
             this.Controls.Add(this.EmployerOrEmployee);
             this.Controls.Add(this.StateAllowanceInput);
@@ -417,7 +406,7 @@ namespace PaycheckAppUI
             this.Controls.Add(this.TitleOfApplication);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PaycheckCalcMainWindow";
             this.Text = "Paycheck Calculator v2.0";
             this.Load += new System.EventHandler(this.PaycheckCalcMainWindow_Load);

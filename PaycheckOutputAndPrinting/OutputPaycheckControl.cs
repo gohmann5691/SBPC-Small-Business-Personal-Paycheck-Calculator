@@ -104,7 +104,8 @@ namespace PaycheckOutputAndPrinting
         private void StringFromRichTextBox(RichTextBox rtb, Document pdfdoc)
         {
             var bodyFont = FontFactory.GetFont("Segoe UI", 16,  BaseColor.BLACK);
-            for (int i = 0; i < 12; i++)
+            //TODO: improve image formatting when rendering to the PDF
+            for (int i = 0; i < 15; i++)
             {
                 Paragraph imagefit = new Paragraph(""+'\n');
                 pdfdoc.Add(imagefit);

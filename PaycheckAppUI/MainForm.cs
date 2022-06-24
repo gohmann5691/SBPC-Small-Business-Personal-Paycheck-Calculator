@@ -21,10 +21,11 @@ namespace PaycheckAppUI
     {
         private CSharpToPythonConfigure.PythonEngineBackend pythonEngineInstance;
         private bool is_employee;
+        private bool quickPrint;
         public PaycheckCalcMainWindow()
         {
-            
-            InitializeComponent();            
+
+            InitializeComponent();
         }
 
         private void addOptionsToDropDowns()
@@ -57,17 +58,10 @@ namespace PaycheckAppUI
             pythonEngineInstance.setupErrorOutputStream();
             pythonEngineInstance.initializePythonEngine();
         }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void fileToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-
-        }
         private void PaycheckCalcMainWindow_Load(object sender, EventArgs e)
         {
+            //set quick print variable
+            this.quickPrint = false;
             //set up some of the UI components manually
             addOptionsToDropDowns();
             addLimitsOnAllowances();
@@ -85,15 +79,16 @@ namespace PaycheckAppUI
                 Properties.Settings.Default.PrinterName = settings.PrinterName;
             }
             //output path default to local
-            if(Properties.Settings.Default.OutputPath == "empty")// || Properties.Settings.Default.OuputPath == "")
+            if (Properties.Settings.Default.OutputPath == "empty")// || Properties.Settings.Default.OuputPath == "")
             {
                 Properties.Settings.Default.OutputPath = AppDomain.CurrentDomain.BaseDirectory;
             }
             //set up default image path
             if (Properties.Settings.Default.ImagePath == "empty")
             {
-                Properties.Settings.Default.ImagePath =Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\defaultImage.png");
+                Properties.Settings.Default.ImagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\defaultImage.png");
             }
+            //sets the business logo if any (default image otherwise
             this.Icon = Properties.Resources.SBPC_Logo;
         }
         private void CalcPaycheckButton_Click(object sender, EventArgs e)
@@ -102,11 +97,14 @@ namespace PaycheckAppUI
             //query the database
             try
             {
+                //store the static parameters in the paycheck static paramaeters object
+                PaycheckStaticParam newStaticParam = new PaycheckStaticParam(paycheckDateInput.Value.ToString("MM-dd-yyyy"), firstNameInput.Text + " " + lastNameInput.Text,
+                    checkNumberInput.Value, ZipCodeTextBox.Text);
                 QueryCityDatabase newCityTaxRate = new QueryCityDatabase(ZipCodeTextBox.Text);
                 newCityTaxRate.QueryDatabase();
                 List<string> cityResults = newCityTaxRate.ResultStrListControl;
                 cityResults[0].Replace(".", ",");
-                double localTaxResults= Math.Round(double.Parse(cityResults[1], System.Globalization.CultureInfo.InvariantCulture),5);
+                double localTaxResults = Math.Round(double.Parse(cityResults[1], System.Globalization.CultureInfo.InvariantCulture), 5);
                 try
                 {
                     //convert and store the values inputted by the user
@@ -125,16 +123,29 @@ namespace PaycheckAppUI
                         localTaxResults, salary);
                     initializeCalculation.executeCalculation();
                     newOutputPaycheck.OutputControl = initializeCalculation.OutputControl;
-                    newOutputPaycheck.MainFormInstance = this;
-                    newOutputPaycheck.ShowDialog();
+                    //newOutputPaycheck.MainFormInstance = this;
+                    newOutputPaycheck.StaticParamIsntance = newStaticParam;
+                    if (this.quickPrint == false)
+                    {
+                        newOutputPaycheck.ShowDialog();
+                    }
+                    else
+                    {
+                        //reset quick print variable
+                        this.quickPrint = false;
+                        newOutputPaycheck.PaycheckUIOutput_Load(sender, e);
+                        newOutputPaycheck.PrintButton_Click(sender, e);
+                    }
+
                 }
-                catch(System.FormatException Formaterror)
+                catch (System.FormatException Formaterror)
                 {
                     MessageBox.Show("One or more fields has an invalid input. Please try again!", "Field Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }
-            catch (RuntimeBinderException binderError){
+            catch (RuntimeBinderException binderError)
+            {
                 MessageBox.Show("An Invalid Zip code was entered. Please try again!", "Zip Code error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -163,49 +174,7 @@ namespace PaycheckAppUI
 
         private void completePaycheckToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PaycheckUIOutput newOutputPaycheck = new PaycheckUIOutput();
-            //query the database
-            try
-            {
-                QueryCityDatabase newCityTaxRate = new QueryCityDatabase(ZipCodeTextBox.Text);
-                newCityTaxRate.QueryDatabase();
-                List<string> cityResults = newCityTaxRate.ResultStrListControl;
-                cityResults[0].Replace(".", ",");
-                double localTaxResults = Math.Round(double.Parse(cityResults[1], System.Globalization.CultureInfo.InvariantCulture), 5);
-                try
-                {
-                    //convert and store the values inputted by the user
-                    double hourlywageOrBaseSalary = formatToDouble(hourlyWageInput.Text);
-                    double salary = formatToDouble(hourlyWageInput.Text);
-                    double hoursWorked = 0.0;
-                    if (HoursWorkedTextBox.Text != "")
-                    {
-                        hoursWorked = formatToDouble(HoursWorkedTextBox.Text);
-                    }
-                    int fedA = Int32.Parse(FederalAllowanceInput.Text);
-                    int stateA = Int32.Parse(StateAllowanceInput.Text);
-                    //TODO: add more try blocks as necessary
-                    //send to backend...
-                    PaycheckCalcInitialize initializeCalculation = new PaycheckCalcInitialize(this.pythonEngineInstance, HourlyOrSalaried.Text, hourlywageOrBaseSalary, hoursWorked, is_employee, fedA, stateA,
-                        localTaxResults, salary);
-                    initializeCalculation.executeCalculation();
-                    newOutputPaycheck.OutputControl = initializeCalculation.OutputControl;
-                    //initializeCalculation.printParameters();
-                    newOutputPaycheck.MainFormInstance = this;
-                    newOutputPaycheck.ShowDialog();
-                }
-                catch (System.FormatException Formaterror)
-                {
-                    MessageBox.Show("One or more fields has an invalid input. Please try again!", "Field Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
-
-            }
-            catch (RuntimeBinderException binderError)
-            {
-                MessageBox.Show("An Invalid Zip code was entered. Please try again!", "Zip Code error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            CalcPaycheckButton_Click(sender, e);
         }
 
         private void addBusinessInfoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -216,59 +185,9 @@ namespace PaycheckAppUI
 
         private void printAndCompletePaycheckToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO: make this chunk more efficient
-            PaycheckUIOutput newOutputPaycheck = new PaycheckUIOutput();
-            //query the database
-            try
-            {
-                QueryCityDatabase newCityTaxRate = new QueryCityDatabase(ZipCodeTextBox.Text);
-                newCityTaxRate.QueryDatabase();
-                List<string> cityResults = newCityTaxRate.ResultStrListControl;
-                cityResults[0].Replace(".", ",");
-                double localTaxResults = Math.Round(double.Parse(cityResults[1], System.Globalization.CultureInfo.InvariantCulture), 5);
-                try
-                {
-                    //convert and store the values inputted by the user
-                    double hourlywageOrBaseSalary = formatToDouble(hourlyWageInput.Text);
-                    double salary = formatToDouble(hourlyWageInput.Text);
-                    double hoursWorked = 0.0;
-                    if (HoursWorkedTextBox.Text != "")
-                    {
-                        hoursWorked = formatToDouble(HoursWorkedTextBox.Text);
-                    }
-                    int fedA = Int32.Parse(FederalAllowanceInput.Text);
-                    int stateA = Int32.Parse(StateAllowanceInput.Text);
-                    PaycheckCalcInitialize initializeCalculation = new PaycheckCalcInitialize(this.pythonEngineInstance, HourlyOrSalaried.Text, hourlywageOrBaseSalary, hoursWorked, is_employee, fedA, stateA,
-                        localTaxResults, salary);
-                    initializeCalculation.executeCalculation();
-                    newOutputPaycheck.OutputControl = initializeCalculation.OutputControl;
-                    //initializeCalculation.printParameters();
-                    newOutputPaycheck.MainFormInstance = this;
-                    //newOutputPaycheck.ShowDialog();
-                    //send directly to printer
-                    //newOutputPaycheck.PrintButton.PerformClick();
-                    //button1_Click(sender, e);
-                    newOutputPaycheck.PaycheckUIOutput_Load(sender, e);
-                    newOutputPaycheck.PrintButton_Click(sender, e);
-
-                }
-                catch (System.FormatException Formaterror)
-                {
-                    MessageBox.Show("One or more fields has an invalid input. Please try again!", "Field Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-                //TODO: maybe this could preplace the above?
-                //may create an event for both buttons?
-                //button1_Click(sender, e);
-                //newOutputPaycheck.PaycheckUIOutput_Load(sender, e);
-                //newOutputPaycheck.PrintButton_Click(sender, e);
-
-
-            }
-            catch (RuntimeBinderException binderError)
-            {
-                MessageBox.Show("An Invalid Zip code was entered. Please try again!", "Zip Code error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //call the calcpaycheck button with quickPrint flag on to bypass opening it and print directly
+            quickPrint = true;
+            CalcPaycheckButton_Click(sender, e);
         }
 
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)

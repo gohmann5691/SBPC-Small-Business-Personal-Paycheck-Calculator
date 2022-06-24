@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CityTaxDataBaseControl.cs" />
+    <Compile Include="PaycheckStaticParam.cs" />
     <Compile Include="EventRaisingStreamWriter.cs" />
     <Compile Include="OutputToUI.cs" />
     <Compile Include="Paycheck.cs" />
