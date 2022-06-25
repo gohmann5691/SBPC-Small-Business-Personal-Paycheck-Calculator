@@ -93,6 +93,7 @@ namespace PaycheckAppUI
         }
         private void CalcPaycheckButton_Click(object sender, EventArgs e)
         {
+            //TODO: make this code chunk more organized into classes
             PaycheckUIOutput newOutputPaycheck = new PaycheckUIOutput();
             //query the database
             try
