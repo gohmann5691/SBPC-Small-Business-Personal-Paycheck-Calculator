@@ -72,6 +72,7 @@ namespace PaycheckAppUI
                 Properties.Settings.Default.DefaultZipCode = defaultZipTextBox.Text;
                 //Properties.Settings.Default["ShortDescription"] = ShortDescInput.Text;
                 Properties.Settings.Default.Save(); // Saves settings in application configuration file
+                this.Close(); //close the settings bar
             }
             else
             {
