@@ -44,6 +44,8 @@
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_itextsharp.dll_1" Value="..\packages\iTextSharp.5.5.13.3\lib"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_pdfium.dll" Value="..\PaycheckOutputAndPrinting\bin\Release\x86"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_pdfium.dll_1" Value="..\PaycheckOutputAndPrinting\bin\Release\x64"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_pdfium.dll_2" Value="..\PaycheckAppUI\bin\Release\x64"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_pdfium.dll_3" Value="..\PaycheckAppUI\bin\Release\x86"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Crypto.dll" Value="BouncyCastle.Crypto.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Crypto.dll_1" Value="BouncyCastle.Crypto.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CSharpToPythonConfigure.dll" Value="CSharpToPythonConfigure.dll"/>
@@ -81,6 +83,8 @@
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itextsharp.dll_1" Value="itextsharp.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll" Value="pdfium.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_1" Value="pdfium.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_2" Value="pdfium.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_3" Value="pdfium.dll"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|SBPC]." ValueLocId="*"/>
     <ROW Property="ARPPRODUCTICON" Value="SBPCLogo.exe" Type="8"/>
@@ -111,7 +115,9 @@
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
     <ROW Directory="cityTaxDatabase_Dir" Directory_Parent="APPDIR" DefaultDir="CITYTA~1|cityTaxDatabase"/>
     <ROW Directory="pythonBackend_Dir" Directory_Parent="APPDIR" DefaultDir="PYTHON~1|pythonBackend"/>
+    <ROW Directory="x64_1_Dir" Directory_Parent="PaycheckAppUI_Dir" DefaultDir="x64"/>
     <ROW Directory="x64_Dir" Directory_Parent="PaycheckOutputAndPrinting_Dir" DefaultDir="x64"/>
+    <ROW Directory="x86_1_Dir" Directory_Parent="PaycheckAppUI_Dir" DefaultDir="x86"/>
     <ROW Directory="x86_Dir" Directory_Parent="PaycheckOutputAndPrinting_Dir" DefaultDir="x86"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
@@ -120,6 +126,8 @@
     <ROW Component="CSharpToPythonConfigure_References" ComponentId="{E611CDF3-EA1C-440B-BAB0-3512CC20FF99}" Directory_="CSharpToPythonConfigure_Dir" Attributes="0" KeyPath="Microsoft.Scripting.Metadata.dll"/>
     <ROW Component="CSharpToPythonConfigure_SymbolsOutput" ComponentId="{C36A48D5-D006-4F19-8AF9-D7AFAEF1D6E3}" Directory_="CSharpToPythonConfigure_Dir" Attributes="0" KeyPath="CSharpToPythonConfigure.pdb"/>
     <ROW Component="CityTax.py" ComponentId="{4117DD62-3386-450E-9BCB-24A2AC46679E}" Directory_="pythonBackend_Dir" Attributes="0" KeyPath="CityTax.py" Type="0"/>
+    <ROW Component="PaycheckAppUI_ContentOutput_x64" ComponentId="{F598AACD-E0DF-4050-B453-78593A12662D}" Directory_="x64_1_Dir" Attributes="256" KeyPath="pdfium.dll_2"/>
+    <ROW Component="PaycheckAppUI_ContentOutput_x86" ComponentId="{060AEF2F-2072-41AD-965D-E09199DB2442}" Directory_="x86_1_Dir" Attributes="0" KeyPath="pdfium.dll_3"/>
     <ROW Component="PaycheckAppUI_PrimaryOutput" ComponentId="{410AD3A6-2B8E-4775-A442-88ECC9821A69}" Directory_="PaycheckAppUI_Dir" Attributes="0" KeyPath="PaycheckAppUI.exe"/>
     <ROW Component="PaycheckAppUI_References" ComponentId="{16E178FA-F615-4585-819C-CF0A2F42E0E7}" Directory_="PaycheckAppUI_Dir" Attributes="0" KeyPath="PdfiumViewer.dll"/>
     <ROW Component="PaycheckAppUI_SymbolsOutput" ComponentId="{9DE742F9-8C69-4AAC-83F6-39A0A88A7CF5}" Directory_="PaycheckAppUI_Dir" Attributes="0" KeyPath="SBPC.pdb"/>
@@ -186,6 +194,8 @@
     <ROW File="pdfium.dll" Component_="PaycheckOutputAndPrinting_ContentOutput_x86" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_pdfium.dll&gt;" SelfReg="false"/>
     <ROW File="PaycheckOutputAndPrinting.pdb" Component_="PaycheckOutputAndPrinting_SymbolsOutput" FileName="PAYCHE~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PaycheckOutputAndPrinting.pdb&gt;" SelfReg="false"/>
     <ROW File="pdfium.dll_1" Component_="PaycheckOutputAndPrinting_ContentOutput_x64" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_pdfium.dll_1&gt;" SelfReg="false"/>
+    <ROW File="pdfium.dll_2" Component_="PaycheckAppUI_ContentOutput_x64" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_pdfium.dll_2&gt;" SelfReg="false"/>
+    <ROW File="pdfium.dll_3" Component_="PaycheckAppUI_ContentOutput_x86" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_pdfium.dll_3&gt;" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_BouncyCastle.Crypto.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_BouncyCastle.Crypto.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Crypto.dll]" Type="2" Content="0"/>
@@ -225,6 +235,8 @@
     <ROW Name="AI_APPPATH_PERBUILD_itextsharp.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_itextsharp.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_itextsharp.dll_1]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_pdfium.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_pdfium.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_pdfium.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_pdfium.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_pdfium.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_pdfium.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_pdfium.dll_3" Path="[|AI_PROPPATH_DIR_PERBUILD_pdfium.dll_3]\[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_3]" Type="2" Content="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -313,6 +325,8 @@
     <ROW Feature_="MainFeature" Component_="PaycheckOutputAndPrinting_ContentOutput_x86"/>
     <ROW Feature_="MainFeature" Component_="PaycheckOutputAndPrinting_ContentOutput_x64"/>
     <ROW Feature_="MainFeature" Component_="PaycheckOutputAndPrinting_SymbolsOutput"/>
+    <ROW Feature_="MainFeature" Component_="PaycheckAppUI_ContentOutput_x64"/>
+    <ROW Feature_="MainFeature" Component_="PaycheckAppUI_ContentOutput_x86"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="SBPCLogo.exe" SourcePath="..\IconLogo\SBPC-Logo.ico" Index="0"/>
@@ -393,5 +407,7 @@
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="ContentOutput" OutputFile="pdfium.dll_1"/>
     <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="SymbolsOutput" OutputFile="SBPC.pdb"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="SymbolsOutput" OutputFile="PaycheckOutputAndPrinting.pdb"/>
+    <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="ContentOutput" OutputFile="pdfium.dll_2"/>
+    <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="ContentOutput" OutputFile="pdfium.dll_3"/>
   </COMPONENT>
 </DOCUMENT>

@@ -37,7 +37,7 @@ namespace PaycheckOutputAndPrinting
         /// Author: Kendall Bennett ~ https://stackoverflow.com/users/443943/kendall-bennett
         /// </summary>
         /// <returns></returns>
-        public string PrintPDF()
+        public bool PrintPDF()
          {
             try
             {
@@ -74,11 +74,11 @@ namespace PaycheckOutputAndPrinting
                         printDocument.Print();
                     }
                 }
-                return "worked!";
+                return true;
             }
             catch(Exception e)
             {
-                return e.ToString();
+                return false;
             }
         }
     }

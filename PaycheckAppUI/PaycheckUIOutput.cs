@@ -59,10 +59,10 @@ namespace PaycheckAppUI
             string printFilePath = PaycheckOutput.PrintPaycheckPathControl;
             int enteredCopies = (int)numericPrinterCopies.Value;
             DocumentPrinter newPrinter = new DocumentPrinter(Properties.Settings.Default.PrinterName, paperSizeI, printFilePath, enteredCopies);
-            //if (newPrinter.PrintPDF()==false)
-            //{
-                MessageBox.Show(newPrinter.PrintPDF());
-            //}
+            if (newPrinter.PrintPDF()==false)
+            {
+                MessageBox.Show("Printing failed, try changing default printer or contact support");
+            }
         }
         //test button for saving paycheck to pdf
         private void SaveOnlyButon_Click(object sender, EventArgs e)
