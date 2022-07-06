@@ -106,17 +106,5 @@ namespace PaycheckAppUI.Properties {
                 this["DefaultZipCode"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string OuputPath {
-            get {
-                return ((string)(this["OuputPath"]));
-            }
-            set {
-                this["OuputPath"] = value;
-            }
-        }
     }
 }

@@ -34,7 +34,10 @@ namespace PaycheckAppUI
                     printersCombo.SelectedItem = printer;
                 }
             }
+            //output the default zip code
+            defaultZipTextBox.Text = Properties.Settings.Default.DefaultZipCode;
             //lead the application path as the default output paycheck location
+            System.Diagnostics.Debug.WriteLine(Properties.Settings.Default.OutputPath);
             outputLocationTextBox.Text = Properties.Settings.Default.OutputPath;
             this.Icon = Properties.Resources.SBPC_Logo;
 
@@ -68,11 +71,12 @@ namespace PaycheckAppUI
             {
                 //overwrite changed settings
                 Properties.Settings.Default.PrinterName = printersCombo.SelectedItem.ToString();
-                Properties.Settings.Default.OuputPath= outputLocationTextBox.Text;
-                Properties.Settings.Default.DefaultZipCode = defaultZipTextBox.Text;
+                Properties.Settings.Default.OutputPath= outputLocationTextBox.Text.ToString();
+                Properties.Settings.Default.DefaultZipCode = defaultZipTextBox.Text.ToString();
                 //Properties.Settings.Default["ShortDescription"] = ShortDescInput.Text;
                 Properties.Settings.Default.Save(); // Saves settings in application configuration file
-                this.Close(); //close the settings bar
+                System.Diagnostics.Debug.WriteLine(Properties.Settings.Default.OutputPath);
+                this.Close(); //exit the config window after applying
             }
             else
             {

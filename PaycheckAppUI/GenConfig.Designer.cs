@@ -100,7 +100,6 @@ namespace PaycheckAppUI
             this.outputLocationTextBox.Location = new System.Drawing.Point(8, 218);
             this.outputLocationTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.outputLocationTextBox.Name = "outputLocationTextBox";
-            this.outputLocationTextBox.ReadOnly = true;
             this.outputLocationTextBox.Size = new System.Drawing.Size(479, 36);
             this.outputLocationTextBox.TabIndex = 5;
             // 

@@ -51,7 +51,7 @@ namespace PaycheckAppUI
                     Properties.Settings.Default["CompanyName"] = setNameInput.Text;
                     Properties.Settings.Default["ShortDescription"] = shortDescInput.Text;
                     Properties.Settings.Default.Save(); // Saves settings in application configuration file
-                    this.Close(); //close the settings bar
+                    this.Close(); // close after successfuly applying settings
                 }
                 else
                 {

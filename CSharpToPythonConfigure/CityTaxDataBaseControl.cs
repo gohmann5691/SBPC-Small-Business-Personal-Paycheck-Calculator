@@ -25,8 +25,27 @@ namespace CSharpToPythonConfigure
         public CityTaxDataBaseControl(string zipCodeInput)
         {
             this.db_outputList = new List<string> { };
-            this.dbcon = new OleDbConnection(constr);
+            if (checkDBPath() == false)
+            {
+                this.dbcon = new OleDbConnection(constr);
+            }
             this.zipCodeInput = zipCodeInput;
+
+        }
+        private bool checkDBPath()
+        {
+            //change the relative path if the program is installed
+            if (Path.GetFileName(Path.GetDirectoryName(relativePath)) == "Program Files (x86)" || Path.GetFileName(Path.GetDirectoryName(relativePath)) == "Program Files(x86)")
+            {
+                relativePath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"SBPC\SBPC-Small-Business-Paycheck-Calculator\..\..\..\"));
+                constr = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= " + relativePath + @"cityTaxDatabase\cityTaxDatabase.mdb";
+                this.dbcon = new OleDbConnection(constr);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public void openDBConnection()
         {
