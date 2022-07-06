@@ -34,18 +34,12 @@
       <Name>PaycheckAppUI</Name>
       <Project>{5e2be619-9583-473b-affa-052a84547cf6}</Project>
       <Private>True</Private>
+      <CreateShortcut>False</CreateShortcut>
       <OutputsToImport>PrimaryOutput;References;ContentOutput;DocumentationOutput;LocalizedResourcesOutput;SymbolsOutput;ComTypeLibraryOutput</OutputsToImport>
     </ProjectReference>
     <ProjectReference Include="..\PaycheckOutputAndPrinting\PaycheckOutputAndPrinting.csproj">
       <Name>PaycheckOutputAndPrinting</Name>
       <Project>{10fca7ab-a326-4e26-96cd-198338658882}</Project>
-      <Private>True</Private>
-      <CreateShortcut>False</CreateShortcut>
-      <OutputsToImport>PrimaryOutput;References;ContentOutput;DocumentationOutput;LocalizedResourcesOutput;SymbolsOutput;ComTypeLibraryOutput</OutputsToImport>
-    </ProjectReference>
-    <ProjectReference Include="..\pythonBackend\pythonBackend.pyproj">
-      <Name>pythonBackend</Name>
-      <Project>{d493e792-add2-4408-8bb2-fa99678923e7}</Project>
       <Private>True</Private>
       <CreateShortcut>False</CreateShortcut>
       <OutputsToImport>PrimaryOutput;References;ContentOutput;DocumentationOutput;LocalizedResourcesOutput;SymbolsOutput;ComTypeLibraryOutput</OutputsToImport>

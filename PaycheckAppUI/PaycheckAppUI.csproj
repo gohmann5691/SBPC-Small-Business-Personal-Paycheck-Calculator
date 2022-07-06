@@ -7,7 +7,7 @@
     <ProjectGuid>{5E2BE619-9583-473B-AFFA-052A84547CF6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PaycheckAppUI</RootNamespace>
-    <AssemblyName>PaycheckAppUI</AssemblyName>
+    <AssemblyName>SBPC</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

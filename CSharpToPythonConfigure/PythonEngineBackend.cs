@@ -26,6 +26,7 @@ namespace CSharpToPythonConfigure
         {
             this.scope = scope;
             this.relativePath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
+
         }
 
         public void setupErrorOutputStream()
@@ -54,17 +55,35 @@ namespace CSharpToPythonConfigure
         {
             engine.SetSearchPaths(_myPath);
             this.scope = engine.CreateScope();
-            Debug.WriteLine(relativePath);
-            engine.ExecuteFile(relativePath + @"pythonBackend\CityTax.py");
-            engine.ExecuteFile(relativePath + @"pythonBackend\FederalIncomeTax.py");
-            engine.ExecuteFile(relativePath + @"pythonBackend\HourlyPayRate.py");
-            engine.ExecuteFile(relativePath + @"pythonBackend\CSharpToPython.py", scope);
-            engine.ExecuteFile(relativePath + @"pythonBackend\HourlyPayRate.py");
-            engine.ExecuteFile(relativePath + @"pythonBackend\MedicareTax.py");
-            engine.ExecuteFile(relativePath + @"pythonBackend\SocialSecurityTax.py");
-            engine.ExecuteFile(relativePath + @"pythonBackend\StateIncomeTax.py");
-            engine.ExecuteFile(relativePath + @"pythonBackend\PaycheckType.py", scope);
-            engine.ExecuteFile(relativePath + @"pythonBackend\main.py", scope);
+            //Debug.WriteLine(relativePath);
+            try
+            {
+                engine.ExecuteFile(relativePath + @"pythonBackend\CityTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\FederalIncomeTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\HourlyPayRate.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\CSharpToPython.py", scope);
+                engine.ExecuteFile(relativePath + @"pythonBackend\HourlyPayRate.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\MedicareTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\SocialSecurityTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\StateIncomeTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\PaycheckType.py", scope);
+                engine.ExecuteFile(relativePath + @"pythonBackend\main.py", scope);
+            }
+            catch(Exception e)
+            {
+                this.relativePath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"SBPC\SBPC-Small-Business-Paycheck-Calculator\..\..\..\"));
+                engine.ExecuteFile(relativePath + @"pythonBackend\CityTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\FederalIncomeTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\HourlyPayRate.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\CSharpToPython.py", scope);
+                engine.ExecuteFile(relativePath + @"pythonBackend\HourlyPayRate.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\MedicareTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\SocialSecurityTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\StateIncomeTax.py");
+                engine.ExecuteFile(relativePath + @"pythonBackend\PaycheckType.py", scope);
+                engine.ExecuteFile(relativePath + @"pythonBackend\main.py", scope);
+            }
+           
         }
         public ScriptScope ScopeControl
         {

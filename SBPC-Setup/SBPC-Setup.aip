@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <DOCUMENT Type="Advanced Installer" CreateVersion="19.6" version="19.6" Modules="simple" RootPath="." Language="en" Id="{39C1F862-334C-4F1E-B470-BCAC92B57F40}">
   <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
-    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent"/>
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
@@ -21,24 +21,24 @@
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_IronPython.Wpf.dll_1" Value="..\packages\IronPython.2.7.12\lib\net45"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_IronPython.dll" Value="..\packages\IronPython.2.7.12\lib\net45"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_IronPython.dll_1" Value="..\packages\IronPython.2.7.12\lib\net45"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_IronPython.dll_2" Value="..\CSharpToPythonConfigure\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_IronPython.dll_3" Value="..\CSharpToPythonConfigure\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Dynamic.dll" Value="..\packages\DynamicLanguageRuntime.1.3.1\lib\net45"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Dynamic.dll_1" Value="..\packages\DynamicLanguageRuntime.1.3.1\lib\net45"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Dynamic.dll_2" Value="..\CSharpToPythonConfigure\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Dynamic.dll_3" Value="..\CSharpToPythonConfigure\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.Metadata.dll" Value="..\packages\DynamicLanguageRuntime.1.3.1\lib\net45"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.Metadata.dll_1" Value="..\packages\DynamicLanguageRuntime.1.3.1\lib\net45"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.Metadata.dll_2" Value="..\CSharpToPythonConfigure\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.Metadata.dll_3" Value="..\CSharpToPythonConfigure\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.dll" Value="..\packages\DynamicLanguageRuntime.1.3.1\lib\net45"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.dll_1" Value="..\packages\DynamicLanguageRuntime.1.3.1\lib\net45"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.dll_2" Value="..\CSharpToPythonConfigure\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.dll_3" Value="..\CSharpToPythonConfigure\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PaycheckAppUI.exe" Value="..\PaycheckAppUI\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PaycheckAppUI.exe.config" Value="..\PaycheckAppUI\bin\Debug"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_PaycheckAppUI.pdb" Value="..\PaycheckAppUI\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PaycheckOutputAndPrinting.dll" Value="..\PaycheckOutputAndPrinting\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PaycheckOutputAndPrinting.dll_1" Value="..\PaycheckOutputAndPrinting\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PaycheckOutputAndPrinting.pdb" Value="..\PaycheckOutputAndPrinting\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PdfiumViewer.dll" Value="..\PaycheckOutputAndPrinting\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PdfiumViewer.dll_1" Value="..\packages\PdfiumViewer.2.13.0.0\lib\net20"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_SBPC.pdb" Value="..\PaycheckAppUI\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Drawing.Common.dll" Value="..\packages\System.Drawing.Common.6.0.0\lib\net461"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_itextsharp.dll" Value="..\packages\iTextSharp.5.5.13.3\lib"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_itextsharp.dll_1" Value="..\packages\iTextSharp.5.5.13.3\lib"/>
@@ -60,24 +60,24 @@
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_IronPython.Wpf.dll_1" Value="IronPython.Wpf.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll" Value="IronPython.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll_1" Value="IronPython.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll_2" Value="IronPython.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll_3" Value="IronPython.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll" Value="Microsoft.Dynamic.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll_1" Value="Microsoft.Dynamic.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll_2" Value="Microsoft.Dynamic.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll_3" Value="Microsoft.Dynamic.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll" Value="Microsoft.Scripting.Metadata.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll_1" Value="Microsoft.Scripting.Metadata.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll_2" Value="Microsoft.Scripting.Metadata.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll_3" Value="Microsoft.Scripting.Metadata.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll" Value="Microsoft.Scripting.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll_1" Value="Microsoft.Scripting.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll_2" Value="Microsoft.Scripting.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PaycheckAppUI.exe" Value="PaycheckAppUI.exe"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PaycheckAppUI.exe.config" Value="PaycheckAppUI.exe.config"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PaycheckAppUI.pdb" Value="PaycheckAppUI.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll_3" Value="Microsoft.Scripting.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PaycheckAppUI.exe" Value="SBPC.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PaycheckAppUI.exe.config" Value="SBPC.exe.config"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.dll" Value="PaycheckOutputAndPrinting.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.dll_1" Value="PaycheckOutputAndPrinting.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.pdb" Value="PaycheckOutputAndPrinting.pdb"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PdfiumViewer.dll" Value="PdfiumViewer.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PdfiumViewer.dll_1" Value="PdfiumViewer.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_SBPC.pdb" Value="SBPC.pdb"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Drawing.Common.dll" Value="System.Drawing.Common.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itextsharp.dll" Value="itextsharp.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itextsharp.dll_1" Value="itextsharp.dll"/>
@@ -86,13 +86,14 @@
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_pdfium_x64.dll" Value="pdfium_x64.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_pdfium_x86.dll" Value="pdfium_x86.dll"/>
     <ROW Property="ALLUSERS" Value="1"/>
-    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|SBPC]." ValueLocId="*"/>
     <ROW Property="ARPPRODUCTICON" Value="SBPCLogo.exe" Type="8"/>
-    <ROW Property="Manufacturer" Value="Your Company"/>
+    <ROW Property="Manufacturer" Value="SBPC"/>
     <ROW Property="ProductCode" Value="1033:{30B2F2E7-DCA8-4786-A103-118F9FCB562B} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="SBPC-Small-Business-Paycheck-Calculator"/>
     <ROW Property="ProductVersion" Value="2.0.0"/>
+    <ROW Property="SBPC" Value="SBPC"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{4B97B9A4-F55C-416E-86FB-EB69B19044A1}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -107,29 +108,32 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
     <ROW Directory="CSharpToPythonConfigure_Dir" Directory_Parent="APPDIR" DefaultDir="CSHARP~1|CSharpToPythonConfigure"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
     <ROW Directory="PaycheckAppUI_Dir" Directory_Parent="APPDIR" DefaultDir="PAYCHE~1|PaycheckAppUI"/>
     <ROW Directory="PaycheckOutputAndPrinting_Dir" Directory_Parent="APPDIR" DefaultDir="PAYCHE~2|PaycheckOutputAndPrinting"/>
     <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="pythonBackend_Dir" Directory_Parent="APPDIR" DefaultDir="PYTHON~1|pythonBackend"/>
     <ROW Directory="x64_Dir" Directory_Parent="PaycheckOutputAndPrinting_Dir" DefaultDir="x64"/>
     <ROW Directory="x86_Dir" Directory_Parent="PaycheckOutputAndPrinting_Dir" DefaultDir="x86"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{5B1443EF-B62A-435C-A446-6712789B2C0D}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="CSharpToPythonConfigure_PrimaryOutput" ComponentId="{23DF932B-8B37-49F2-ACDC-120441A515D9}" Directory_="CSharpToPythonConfigure_Dir" Attributes="0" KeyPath="CSharpToPythonConfigure.dll"/>
-    <ROW Component="CSharpToPythonConfigure_References" ComponentId="{44D72774-67F1-4DFA-9EDF-8E8E31968856}" Directory_="CSharpToPythonConfigure_Dir" Attributes="0" KeyPath="Microsoft.Scripting.Metadata.dll"/>
-    <ROW Component="CSharpToPythonConfigure_SymbolsOutput" ComponentId="{8C429F78-1D39-4860-8A81-1C6F14F7C681}" Directory_="CSharpToPythonConfigure_Dir" Attributes="0" KeyPath="CSharpToPythonConfigure.pdb"/>
-    <ROW Component="PaycheckAppUI_PrimaryOutput" ComponentId="{2CD983D9-3DD3-4C25-B67E-24BD803EE97E}" Directory_="PaycheckAppUI_Dir" Attributes="0" KeyPath="PaycheckAppUI.exe"/>
-    <ROW Component="PaycheckAppUI_References" ComponentId="{4D103C0E-9B7B-4078-9BB6-D91628A63525}" Directory_="PaycheckAppUI_Dir" Attributes="0" KeyPath="PdfiumViewer.dll"/>
-    <ROW Component="PaycheckAppUI_SymbolsOutput" ComponentId="{53496473-AACD-4C86-99B0-E4C84A603D83}" Directory_="PaycheckAppUI_Dir" Attributes="0" KeyPath="PaycheckAppUI.pdb"/>
-    <ROW Component="PaycheckOutputAndPrinting_ContentOutput" ComponentId="{118983AD-3752-4D83-B3AA-FAE80A515803}" Directory_="PaycheckOutputAndPrinting_Dir" Attributes="256" KeyPath="pdfium_x86.dll"/>
-    <ROW Component="PaycheckOutputAndPrinting_ContentOutput_x64" ComponentId="{28A03CD0-3149-4C08-AEA4-CAAD52614A0E}" Directory_="x64_Dir" Attributes="256" KeyPath="pdfium.dll_1"/>
-    <ROW Component="PaycheckOutputAndPrinting_ContentOutput_x86" ComponentId="{A881BCE9-5317-4FA4-9A7E-8483FB41C426}" Directory_="x86_Dir" Attributes="0" KeyPath="pdfium.dll"/>
-    <ROW Component="PaycheckOutputAndPrinting_PrimaryOutput" ComponentId="{421E8032-989F-40A2-B341-CC60DC2DB8DD}" Directory_="PaycheckOutputAndPrinting_Dir" Attributes="0" KeyPath="PaycheckOutputAndPrinting.dll_1"/>
-    <ROW Component="PaycheckOutputAndPrinting_References" ComponentId="{D07198CE-3F26-4E8B-BCD0-8977A729C054}" Directory_="PaycheckOutputAndPrinting_Dir" Attributes="0" KeyPath="Microsoft.Scripting.Metadata.dll_2"/>
-    <ROW Component="PaycheckOutputAndPrinting_SymbolsOutput" ComponentId="{44A4C5BF-12A0-4BF6-BB25-9A53731E2BE0}" Directory_="PaycheckOutputAndPrinting_Dir" Attributes="0" KeyPath="PaycheckOutputAndPrinting.pdb"/>
+    <ROW Component="CSharpToPythonConfigure_PrimaryOutput" ComponentId="{79CD6E02-448A-46CE-AEFA-B4DDA63B4AD7}" Directory_="CSharpToPythonConfigure_Dir" Attributes="0" KeyPath="CSharpToPythonConfigure.dll"/>
+    <ROW Component="CSharpToPythonConfigure_References" ComponentId="{E611CDF3-EA1C-440B-BAB0-3512CC20FF99}" Directory_="CSharpToPythonConfigure_Dir" Attributes="0" KeyPath="Microsoft.Scripting.Metadata.dll"/>
+    <ROW Component="CSharpToPythonConfigure_SymbolsOutput" ComponentId="{C36A48D5-D006-4F19-8AF9-D7AFAEF1D6E3}" Directory_="CSharpToPythonConfigure_Dir" Attributes="0" KeyPath="CSharpToPythonConfigure.pdb"/>
+    <ROW Component="CityTax.py" ComponentId="{4117DD62-3386-450E-9BCB-24A2AC46679E}" Directory_="pythonBackend_Dir" Attributes="0" KeyPath="CityTax.py" Type="0"/>
+    <ROW Component="PaycheckAppUI_PrimaryOutput" ComponentId="{410AD3A6-2B8E-4775-A442-88ECC9821A69}" Directory_="PaycheckAppUI_Dir" Attributes="0" KeyPath="PaycheckAppUI.exe"/>
+    <ROW Component="PaycheckAppUI_References" ComponentId="{16E178FA-F615-4585-819C-CF0A2F42E0E7}" Directory_="PaycheckAppUI_Dir" Attributes="0" KeyPath="PdfiumViewer.dll"/>
+    <ROW Component="PaycheckAppUI_SymbolsOutput" ComponentId="{9DE742F9-8C69-4AAC-83F6-39A0A88A7CF5}" Directory_="PaycheckAppUI_Dir" Attributes="0" KeyPath="SBPC.pdb"/>
+    <ROW Component="PaycheckOutputAndPrinting_ContentOutput" ComponentId="{B884D9E5-458B-429B-9AD5-A59D49182B5F}" Directory_="PaycheckOutputAndPrinting_Dir" Attributes="256" KeyPath="pdfium_x86.dll"/>
+    <ROW Component="PaycheckOutputAndPrinting_ContentOutput_x64" ComponentId="{8EFA32A5-C209-48F8-873D-E6F56D68AA2E}" Directory_="x64_Dir" Attributes="256" KeyPath="pdfium.dll_1"/>
+    <ROW Component="PaycheckOutputAndPrinting_ContentOutput_x86" ComponentId="{80D7E2BD-CA4A-4D13-BAD0-39D69DA42546}" Directory_="x86_Dir" Attributes="0" KeyPath="pdfium.dll"/>
+    <ROW Component="PaycheckOutputAndPrinting_PrimaryOutput" ComponentId="{3E7A0D59-223D-49D2-AE65-4446798FB655}" Directory_="PaycheckOutputAndPrinting_Dir" Attributes="0" KeyPath="PaycheckOutputAndPrinting.dll_1"/>
+    <ROW Component="PaycheckOutputAndPrinting_References" ComponentId="{14A69EFC-5717-4408-BA58-1793A2156F4F}" Directory_="PaycheckOutputAndPrinting_Dir" Attributes="0" KeyPath="Microsoft.Scripting.Metadata.dll_3"/>
+    <ROW Component="PaycheckOutputAndPrinting_SymbolsOutput" ComponentId="{FCD1D74B-90E0-4A76-A1A1-F02B49ADCE86}" Directory_="PaycheckOutputAndPrinting_Dir" Attributes="0" KeyPath="PaycheckOutputAndPrinting.pdb"/>
     <ROW Component="ProductInformation" ComponentId="{24BF8146-38D2-45D9-932C-3C7531BFC1B4}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="SHORTCUTDIR" ComponentId="{63765A32-FD9A-4A72-A8BC-651F9830F899}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{1FB2EB04-C2FC-4EF0-BC46-DFE4A5C69BE0}" Directory_="SHORTCUTDIR" Attributes="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -158,23 +162,34 @@
     <ROW File="Microsoft.Scripting.dll_1" Component_="PaycheckAppUI_References" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Scripting.dll_1&gt;" SelfReg="false"/>
     <ROW File="Microsoft.Scripting.Metadata.dll_1" Component_="PaycheckAppUI_References" FileName="MICROS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Scripting.Metadata.dll_1&gt;" SelfReg="false"/>
     <ROW File="PaycheckOutputAndPrinting.dll" Component_="PaycheckAppUI_References" FileName="PAYCHE~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PaycheckOutputAndPrinting.dll&gt;" SelfReg="false"/>
-    <ROW File="PdfiumViewer.dll" Component_="PaycheckAppUI_References" FileName="PDFIUM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_PdfiumViewer.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PdfiumViewer.dll&gt;" SelfReg="false"/>
-    <ROW File="PaycheckAppUI.pdb" Component_="PaycheckAppUI_SymbolsOutput" FileName="PAYCHE~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckAppUI.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PaycheckAppUI.pdb&gt;" SelfReg="false"/>
     <ROW File="PaycheckOutputAndPrinting.dll_1" Component_="PaycheckOutputAndPrinting_PrimaryOutput" FileName="PAYCHE~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PaycheckOutputAndPrinting.dll_1&gt;" SelfReg="false"/>
     <ROW File="BouncyCastle.Crypto.dll_1" Component_="PaycheckOutputAndPrinting_References" FileName="BOUNCY~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Crypto.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_BouncyCastle.Crypto.dll_1&gt;" SelfReg="false"/>
     <ROW File="CSharpToPythonConfigure.dll_2" Component_="PaycheckOutputAndPrinting_References" FileName="CSHARP~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_CSharpToPythonConfigure.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CSharpToPythonConfigure.dll_2&gt;" SelfReg="false"/>
     <ROW File="itextsharp.dll_1" Component_="PaycheckOutputAndPrinting_References" FileName="ITEXTS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itextsharp.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itextsharp.dll_1&gt;" SelfReg="false"/>
     <ROW File="PdfiumViewer.dll_1" Component_="PaycheckOutputAndPrinting_References" FileName="PDFIUM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_PdfiumViewer.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PdfiumViewer.dll_1&gt;" SelfReg="false"/>
     <ROW File="System.Drawing.Common.dll" Component_="PaycheckOutputAndPrinting_References" FileName="SYSTEM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Drawing.Common.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Drawing.Common.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Scripting.dll_2" Component_="PaycheckOutputAndPrinting_References" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Scripting.dll_2&gt;" SelfReg="false"/>
-    <ROW File="IronPython.dll_2" Component_="PaycheckOutputAndPrinting_References" FileName="IRONPY~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_IronPython.dll_2&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Dynamic.dll_2" Component_="PaycheckOutputAndPrinting_References" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Dynamic.dll_2&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Scripting.Metadata.dll_2" Component_="PaycheckOutputAndPrinting_References" FileName="MICROS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Scripting.Metadata.dll_2&gt;" SelfReg="false"/>
     <ROW File="pdfium.dll" Component_="PaycheckOutputAndPrinting_ContentOutput_x86" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_pdfium.dll&gt;" SelfReg="false"/>
     <ROW File="pdfium.dll_1" Component_="PaycheckOutputAndPrinting_ContentOutput_x64" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_pdfium.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_pdfium.dll_1&gt;" SelfReg="false"/>
     <ROW File="pdfium_x64.dll" Component_="PaycheckOutputAndPrinting_ContentOutput" FileName="PDFIUM~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_pdfium_x64.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_pdfium_x64.dll&gt;" SelfReg="false"/>
     <ROW File="pdfium_x86.dll" Component_="PaycheckOutputAndPrinting_ContentOutput" FileName="PDFIUM~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_pdfium_x86.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_pdfium_x86.dll&gt;" SelfReg="false"/>
     <ROW File="PaycheckOutputAndPrinting.pdb" Component_="PaycheckOutputAndPrinting_SymbolsOutput" FileName="PAYCHE~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PaycheckOutputAndPrinting.pdb&gt;" SelfReg="false"/>
+    <ROW File="PdfiumViewer.dll" Component_="PaycheckAppUI_References" FileName="PDFIUM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_PdfiumViewer.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PdfiumViewer.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Scripting.dll_3" Component_="PaycheckOutputAndPrinting_References" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Scripting.dll_3&gt;" SelfReg="false"/>
+    <ROW File="IronPython.dll_3" Component_="PaycheckOutputAndPrinting_References" FileName="IRONPY~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_IronPython.dll_3&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Dynamic.dll_3" Component_="PaycheckOutputAndPrinting_References" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Dynamic.dll_3&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Scripting.Metadata.dll_3" Component_="PaycheckOutputAndPrinting_References" FileName="MICROS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Scripting.Metadata.dll_3&gt;" SelfReg="false"/>
+    <ROW File="CityTax.py" Component_="CityTax.py" FileName="CityTax.py" Attributes="0" SourcePath="..\pythonBackend\CityTax.py" SelfReg="false"/>
+    <ROW File="CSharpToPython.py" Component_="CityTax.py" FileName="CSHARP~1.PY|CSharpToPython.py" Attributes="0" SourcePath="..\pythonBackend\CSharpToPython.py" SelfReg="false"/>
+    <ROW File="FederalIncomeTax.py" Component_="CityTax.py" FileName="FEDERA~1.PY|FederalIncomeTax.py" Attributes="0" SourcePath="..\pythonBackend\FederalIncomeTax.py" SelfReg="false"/>
+    <ROW File="HourlyPayRate.py" Component_="CityTax.py" FileName="HOURLY~1.PY|HourlyPayRate.py" Attributes="0" SourcePath="..\pythonBackend\HourlyPayRate.py" SelfReg="false"/>
+    <ROW File="main.py" Component_="CityTax.py" FileName="main.py" Attributes="0" SourcePath="..\pythonBackend\main.py" SelfReg="false"/>
+    <ROW File="MedicareTax.py" Component_="CityTax.py" FileName="MEDICA~1.PY|MedicareTax.py" Attributes="0" SourcePath="..\pythonBackend\MedicareTax.py" SelfReg="false"/>
+    <ROW File="PaycheckType.py" Component_="CityTax.py" FileName="PAYCHE~1.PY|PaycheckType.py" Attributes="0" SourcePath="..\pythonBackend\PaycheckType.py" SelfReg="false"/>
+    <ROW File="pythonBackend.pyproj" Component_="CityTax.py" FileName="PYTHON~1.PYP|pythonBackend.pyproj" Attributes="0" SourcePath="..\pythonBackend\pythonBackend.pyproj" SelfReg="false"/>
+    <ROW File="SalaryPay.py" Component_="CityTax.py" FileName="SALARY~1.PY|SalaryPay.py" Attributes="0" SourcePath="..\pythonBackend\SalaryPay.py" SelfReg="false"/>
+    <ROW File="SocialSecurityTax.py" Component_="CityTax.py" FileName="SOCIAL~1.PY|SocialSecurityTax.py" Attributes="0" SourcePath="..\pythonBackend\SocialSecurityTax.py" SelfReg="false"/>
+    <ROW File="StateIncomeTax.py" Component_="CityTax.py" FileName="STATEI~1.PY|StateIncomeTax.py" Attributes="0" SourcePath="..\pythonBackend\StateIncomeTax.py" SelfReg="false"/>
+    <ROW File="SBPC.pdb" Component_="PaycheckAppUI_SymbolsOutput" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_SBPC.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_SBPC.pdb&gt;" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_BouncyCastle.Crypto.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_BouncyCastle.Crypto.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Crypto.dll]" Type="2" Content="0"/>
@@ -191,24 +206,24 @@
     <ROW Name="AI_APPPATH_PERBUILD_IronPython.Wpf.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_IronPython.Wpf.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_IronPython.Wpf.dll_1]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_IronPython.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_IronPython.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_IronPython.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_IronPython.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll_1]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_IronPython.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_IronPython.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_IronPython.dll_3" Path="[|AI_PROPPATH_DIR_PERBUILD_IronPython.dll_3]\[|AI_PROPPATH_FILENAME_PERBUILD_IronPython.dll_3]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Dynamic.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Dynamic.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Dynamic.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Dynamic.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll_1]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Dynamic.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Dynamic.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Dynamic.dll_3" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Dynamic.dll_3]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Dynamic.dll_3]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Scripting.Metadata.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.Metadata.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Scripting.Metadata.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.Metadata.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll_1]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Scripting.Metadata.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.Metadata.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Scripting.Metadata.dll_3" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.Metadata.dll_3]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.Metadata.dll_3]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Scripting.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Scripting.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll_1]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Scripting.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Scripting.dll_3" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Scripting.dll_3]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Scripting.dll_3]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PaycheckAppUI.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_PaycheckAppUI.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckAppUI.exe]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PaycheckAppUI.exe.config" Path="[|AI_PROPPATH_DIR_PERBUILD_PaycheckAppUI.exe.config]\[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckAppUI.exe.config]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_PaycheckAppUI.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_PaycheckAppUI.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckAppUI.pdb]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PaycheckOutputAndPrinting.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_PaycheckOutputAndPrinting.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PaycheckOutputAndPrinting.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_PaycheckOutputAndPrinting.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.dll_1]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PaycheckOutputAndPrinting.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_PaycheckOutputAndPrinting.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_PaycheckOutputAndPrinting.pdb]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PdfiumViewer.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_PdfiumViewer.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_PdfiumViewer.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PdfiumViewer.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_PdfiumViewer.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_PdfiumViewer.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_SBPC.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_SBPC.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_SBPC.pdb]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_System.Drawing.Common.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Drawing.Common.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Drawing.Common.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_itextsharp.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itextsharp.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itextsharp.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_itextsharp.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_itextsharp.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_itextsharp.dll_1]" Type="2" Content="0"/>
@@ -294,15 +309,16 @@
     <ROW Feature_="MainFeature" Component_="CSharpToPythonConfigure_References"/>
     <ROW Feature_="MainFeature" Component_="CSharpToPythonConfigure_SymbolsOutput"/>
     <ROW Feature_="MainFeature" Component_="PaycheckAppUI_PrimaryOutput"/>
-    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
     <ROW Feature_="MainFeature" Component_="PaycheckAppUI_References"/>
-    <ROW Feature_="MainFeature" Component_="PaycheckAppUI_SymbolsOutput"/>
     <ROW Feature_="MainFeature" Component_="PaycheckOutputAndPrinting_PrimaryOutput"/>
     <ROW Feature_="MainFeature" Component_="PaycheckOutputAndPrinting_References"/>
     <ROW Feature_="MainFeature" Component_="PaycheckOutputAndPrinting_ContentOutput_x86"/>
     <ROW Feature_="MainFeature" Component_="PaycheckOutputAndPrinting_ContentOutput_x64"/>
     <ROW Feature_="MainFeature" Component_="PaycheckOutputAndPrinting_ContentOutput"/>
     <ROW Feature_="MainFeature" Component_="PaycheckOutputAndPrinting_SymbolsOutput"/>
+    <ROW Feature_="MainFeature" Component_="CityTax.py"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="PaycheckAppUI_SymbolsOutput"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="SBPCLogo.exe" SourcePath="..\IconLogo\SBPC-Logo.ico" Index="0"/>
@@ -335,7 +351,8 @@
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="PaycheckAppUI" Directory_="SHORTCUTDIR" Name="PAYCHE~1|PaycheckAppUI" Component_="PaycheckAppUI_PrimaryOutput" Target="[#PaycheckAppUI.exe]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="SBPC" Directory_="SHORTCUTDIR" Name="SBPC" Component_="PaycheckAppUI_PrimaryOutput" Target="[#PaycheckAppUI.exe]" Hotkey="0" Icon_="SBPCLogo.exe" IconIndex="0" ShowCmd="1" WkDir="PaycheckAppUI_Dir"/>
+    <ROW Shortcut="SBPC_1" Directory_="DesktopFolder" Name="SBPC" Component_="PaycheckAppUI_PrimaryOutput" Target="[#PaycheckAppUI.exe]" Hotkey="0" Icon_="SBPCLogo.exe" IconIndex="0" ShowCmd="1" WkDir="PaycheckAppUI_Dir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
@@ -354,7 +371,7 @@
     <ROW ProjectId="{6f04ca39-e8cc-4aea-a91c-802378f9dd1e}" ProjectName="CSharpToPythonConfigure" OutputGroup="References" OutputFile="Microsoft.Scripting.dll"/>
     <ROW ProjectId="{6f04ca39-e8cc-4aea-a91c-802378f9dd1e}" ProjectName="CSharpToPythonConfigure" OutputGroup="References" OutputFile="Microsoft.Scripting.Metadata.dll"/>
     <ROW ProjectId="{6f04ca39-e8cc-4aea-a91c-802378f9dd1e}" ProjectName="CSharpToPythonConfigure" OutputGroup="SymbolsOutput" OutputFile="CSharpToPythonConfigure.pdb"/>
-    <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="PrimaryOutput" OutputFile="PaycheckAppUI.exe" OutputFileShortcut="PaycheckAppUI"/>
+    <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="PrimaryOutput" OutputFile="PaycheckAppUI.exe"/>
     <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="PrimaryOutput" OutputFile="PaycheckAppUI.exe.config"/>
     <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="References" OutputFile="BouncyCastle.Crypto.dll"/>
     <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="References" OutputFile="CSharpToPythonConfigure.dll_1"/>
@@ -367,22 +384,22 @@
     <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="References" OutputFile="Microsoft.Scripting.dll_1"/>
     <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="References" OutputFile="Microsoft.Scripting.Metadata.dll_1"/>
     <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="References" OutputFile="PaycheckOutputAndPrinting.dll"/>
-    <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="References" OutputFile="PdfiumViewer.dll"/>
-    <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="SymbolsOutput" OutputFile="PaycheckAppUI.pdb"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="PrimaryOutput" OutputFile="PaycheckOutputAndPrinting.dll_1"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="BouncyCastle.Crypto.dll_1"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="CSharpToPythonConfigure.dll_2"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="itextsharp.dll_1"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="PdfiumViewer.dll_1"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="System.Drawing.Common.dll"/>
-    <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="Microsoft.Scripting.dll_2"/>
-    <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="IronPython.dll_2"/>
-    <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="Microsoft.Dynamic.dll_2"/>
-    <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="Microsoft.Scripting.Metadata.dll_2"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="ContentOutput" OutputFile="pdfium.dll"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="ContentOutput" OutputFile="pdfium.dll_1"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="ContentOutput" OutputFile="pdfium_x64.dll"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="ContentOutput" OutputFile="pdfium_x86.dll"/>
     <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="SymbolsOutput" OutputFile="PaycheckOutputAndPrinting.pdb"/>
+    <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="References" OutputFile="PdfiumViewer.dll"/>
+    <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="Microsoft.Scripting.dll_3"/>
+    <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="IronPython.dll_3"/>
+    <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="Microsoft.Dynamic.dll_3"/>
+    <ROW ProjectId="{10fca7ab-a326-4e26-96cd-198338658882}" ProjectName="PaycheckOutputAndPrinting" OutputGroup="References" OutputFile="Microsoft.Scripting.Metadata.dll_3"/>
+    <ROW ProjectId="{5e2be619-9583-473b-affa-052a84547cf6}" ProjectName="PaycheckAppUI" OutputGroup="SymbolsOutput" OutputFile="SBPC.pdb"/>
   </COMPONENT>
 </DOCUMENT>
