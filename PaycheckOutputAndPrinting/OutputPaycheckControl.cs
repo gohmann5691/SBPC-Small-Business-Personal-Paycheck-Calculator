@@ -108,7 +108,7 @@ namespace PaycheckOutputAndPrinting
         {
             var bodyFont = FontFactory.GetFont("Segoe UI", this.pdfFontSize,  BaseColor.BLACK);
             //TODO: improve image formatting when rendering to the PDF
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 11; i++)
             {
                 Paragraph imagefit = new Paragraph(""+'\n');
                 pdfdoc.Add(imagefit);
