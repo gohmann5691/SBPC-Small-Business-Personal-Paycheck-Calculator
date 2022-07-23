@@ -55,15 +55,15 @@ namespace PaycheckOutputAndPrinting
             }
             else if (original.Width > original.Height)
             {
-                double divideWidth = original.Width / 200.00;
+                double divideWidth = original.Width / 150.00;
                 newWidth = (int)(original.Width / divideWidth);
-                newHeight = (int)((original.Height * 200.00) / original.Width);
+                newHeight = (int)((original.Height * 150.00) / original.Width);
             }
             else if (original.Height > original.Width)
             {
-                double divideHeight = original.Height / 200.00;
+                double divideHeight = original.Height / 150.00;
                 newHeight = (int)(original.Height / divideHeight);
-                newWidth = (int)((original.Width * 200.00) / original.Height);
+                newWidth = (int)((original.Width * 150.00) / original.Height);
             }
             resized = new Bitmap(original, new Size(newWidth, newHeight));
         }

@@ -86,17 +86,17 @@ namespace PaycheckOutputAndPrinting
                     pdfDoc.Open();
 
                     //add title
-                    var titleFont = FontFactory.GetFont("Segoe UI", 24, iTextSharp.text.Font.UNDERLINE, BaseColor.BLACK);
+                    var titleFont = FontFactory.GetFont("Segoe UI", 22, iTextSharp.text.Font.UNDERLINE, BaseColor.BLACK);
                     Paragraph title = new Paragraph(CompanyNameLabel.Text, titleFont);
                     pdfDoc.Add(title);
                     //add sub description
-                    var descFont = FontFactory.GetFont("Segoe UI", 15, iTextSharp.text.Font.ITALIC, BaseColor.BLACK);
+                    var descFont = FontFactory.GetFont("Segoe UI", 14, iTextSharp.text.Font.ITALIC, BaseColor.BLACK);
                     Paragraph desc = new Paragraph(description, descFont);
                     pdfDoc.Add(desc);
                     iTextSharp.text.Image myLogo = iTextSharp.text.Image.GetInstance(buff);
                     //System
                     myLogo.PaddingTop=30;
-                    myLogo.SetAbsolutePosition(25, 550);
+                    myLogo.SetAbsolutePosition(25, 600);
                     pdfDoc.Add(myLogo);
                     //add in text from rich text box
                     StringFromRichTextBox(this.outputText, pdfDoc);
@@ -108,7 +108,7 @@ namespace PaycheckOutputAndPrinting
         {
             var bodyFont = FontFactory.GetFont("Segoe UI", this.pdfFontSize,  BaseColor.BLACK);
             //TODO: improve image formatting when rendering to the PDF
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 13; i++)
             {
                 Paragraph imagefit = new Paragraph(""+'\n');
                 pdfdoc.Add(imagefit);
