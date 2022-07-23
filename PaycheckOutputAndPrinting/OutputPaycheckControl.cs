@@ -28,10 +28,13 @@ namespace PaycheckOutputAndPrinting
         private string employeeName;
         //used to store the path to print out the doucment
         private string printingPath;
-        public OutputPaycheckControl(RichTextBox RTFParameter, string employeeNameInput, string workingDirectoryInput="")
+        //used to change the pdf font
+        private int pdfFontSize;
+        public OutputPaycheckControl(RichTextBox RTFParameter, string employeeNameInput, string workingDirectoryInput="", int pdfFontSizeInput=12)
         {
             this.outputText = RTFParameter;
             this.employeeName = employeeNameInput;
+            this.pdfFontSize = pdfFontSizeInput;
             if (workingDirectoryInput == "")
             {
                 this.workingDirectory = applicationDirectory;
@@ -103,7 +106,7 @@ namespace PaycheckOutputAndPrinting
         }
         private void StringFromRichTextBox(RichTextBox rtb, Document pdfdoc)
         {
-            var bodyFont = FontFactory.GetFont("Segoe UI", 16,  BaseColor.BLACK);
+            var bodyFont = FontFactory.GetFont("Segoe UI", this.pdfFontSize,  BaseColor.BLACK);
             //TODO: improve image formatting when rendering to the PDF
             for (int i = 0; i < 15; i++)
             {
@@ -116,7 +119,7 @@ namespace PaycheckOutputAndPrinting
                 //Debug.WriteLine(line);
                 if (line == "Deductions: ")
                 {
-                    var deductionSubtitleFont= FontFactory.GetFont("Segoe UI", 20, iTextSharp.text.Font.UNDERLINE, BaseColor.BLACK);
+                    var deductionSubtitleFont= FontFactory.GetFont("Segoe UI", this.pdfFontSize + 4, iTextSharp.text.Font.UNDERLINE, BaseColor.BLACK);
                     Paragraph deductions = new Paragraph(line, deductionSubtitleFont);
                     pdfdoc.Add(deductions);
                 }

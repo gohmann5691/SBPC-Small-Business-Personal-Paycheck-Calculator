@@ -76,8 +76,53 @@ namespace PaycheckAppUI
                 StaticParamIsntance.Date);
             DialogResult notify = MessageBox.Show("Paycheck Saved to PDF!", "Success!");
         }
+        /// <summary>
+        /// /Source: Stack overflow --- https://stackoverflow.com/questions/18966407/enable-copy-cut-past-window-in-a-rich-text-box
+        /// /Author: Thilina H --- https://stackoverflow.com/users/894801/thilina-h
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void outputText_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {   //click event
+                ContextMenu contextMenu = new ContextMenu();
+                MenuItem menuItem = new MenuItem("Cut");
+                menuItem.Click += new EventHandler(CutAction);
+                contextMenu.MenuItems.Add(menuItem);
+                menuItem = new MenuItem("Copy");
+                menuItem.Click += new EventHandler(CopyAction);
+                contextMenu.MenuItems.Add(menuItem);
+                menuItem = new MenuItem("Paste");
+                menuItem.Click += new EventHandler(PasteAction);
+                contextMenu.MenuItems.Add(menuItem);
+
+                outputText.ContextMenu = contextMenu;
+            }
+            
+        }
+        void CutAction(object sender, EventArgs e)
+        {
+            outputText.Cut();
+        }
+
+        void CopyAction(object sender, EventArgs e)
+        {
+            Clipboard.SetText(outputText.SelectedText);
+        }
+
+        void PasteAction(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+            {
+                outputText.Text
+                    += Clipboard.GetText(TextDataFormat.Text).ToString();
+            }
+        }
+
         public PaycheckStaticParam StaticParamIsntance { get; set; }
         public OutputToUI OutputControl { get; set; }
 
+        
     }
 }

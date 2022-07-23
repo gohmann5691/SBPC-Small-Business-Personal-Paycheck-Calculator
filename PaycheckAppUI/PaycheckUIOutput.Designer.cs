@@ -44,17 +44,18 @@ namespace PaycheckAppUI
             // outputText
             // 
             this.outputText.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.outputText.Location = new System.Drawing.Point(11, 226);
-            this.outputText.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.outputText.Location = new System.Drawing.Point(16, 348);
+            this.outputText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.outputText.Name = "outputText";
-            this.outputText.Size = new System.Drawing.Size(671, 492);
+            this.outputText.Size = new System.Drawing.Size(1004, 755);
             this.outputText.TabIndex = 0;
             this.outputText.Text = "";
+            this.outputText.MouseUp += new System.Windows.Forms.MouseEventHandler(this.outputText_MouseUp);
             // 
             // companyLogoBox
             // 
-            this.companyLogoBox.Location = new System.Drawing.Point(11, 26);
-            this.companyLogoBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.companyLogoBox.Location = new System.Drawing.Point(16, 40);
+            this.companyLogoBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.companyLogoBox.Name = "companyLogoBox";
             this.companyLogoBox.Size = new System.Drawing.Size(197, 170);
             this.companyLogoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -65,19 +66,18 @@ namespace PaycheckAppUI
             // 
             this.companyNameLabel.AutoSize = true;
             this.companyNameLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Underline);
-            this.companyNameLabel.Location = new System.Drawing.Point(227, 89);
-            this.companyNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.companyNameLabel.Location = new System.Drawing.Point(340, 137);
             this.companyNameLabel.Name = "companyNameLabel";
-            this.companyNameLabel.Size = new System.Drawing.Size(307, 54);
+            this.companyNameLabel.Size = new System.Drawing.Size(463, 81);
             this.companyNameLabel.TabIndex = 2;
             this.companyNameLabel.Text = "Company Name";
             // 
             // printButton
             // 
-            this.printButton.Location = new System.Drawing.Point(551, 10);
-            this.printButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.printButton.Location = new System.Drawing.Point(826, 15);
+            this.printButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.printButton.Name = "printButton";
-            this.printButton.Size = new System.Drawing.Size(131, 33);
+            this.printButton.Size = new System.Drawing.Size(196, 51);
             this.printButton.TabIndex = 3;
             this.printButton.Text = "Print Paycheck";
             this.printButton.UseCompatibleTextRendering = true;
@@ -87,10 +87,10 @@ namespace PaycheckAppUI
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.saveButton.Location = new System.Drawing.Point(551, 47);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.saveButton.Location = new System.Drawing.Point(826, 72);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(131, 33);
+            this.saveButton.Size = new System.Drawing.Size(196, 51);
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Save Paycheck Only";
             this.saveButton.UseCompatibleTextRendering = true;
@@ -101,27 +101,26 @@ namespace PaycheckAppUI
             // 
             this.copiesLabel.AutoSize = true;
             this.copiesLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.copiesLabel.Location = new System.Drawing.Point(571, 118);
-            this.copiesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.copiesLabel.Location = new System.Drawing.Point(856, 182);
             this.copiesLabel.Name = "copiesLabel";
-            this.copiesLabel.Size = new System.Drawing.Size(69, 25);
+            this.copiesLabel.Size = new System.Drawing.Size(100, 38);
             this.copiesLabel.TabIndex = 5;
             this.copiesLabel.Text = "Copies";
             // 
             // numericPrinterCopies
             // 
             this.numericPrinterCopies.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericPrinterCopies.Location = new System.Drawing.Point(634, 114);
-            this.numericPrinterCopies.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.numericPrinterCopies.Location = new System.Drawing.Point(951, 175);
+            this.numericPrinterCopies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericPrinterCopies.Name = "numericPrinterCopies";
-            this.numericPrinterCopies.Size = new System.Drawing.Size(48, 32);
+            this.numericPrinterCopies.Size = new System.Drawing.Size(72, 45);
             this.numericPrinterCopies.TabIndex = 6;
             // 
             // PaycheckUIOutput
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 728);
+            this.ClientSize = new System.Drawing.Size(1040, 1120);
             this.Controls.Add(this.numericPrinterCopies);
             this.Controls.Add(this.copiesLabel);
             this.Controls.Add(this.saveButton);
@@ -129,7 +128,7 @@ namespace PaycheckAppUI
             this.Controls.Add(this.companyNameLabel);
             this.Controls.Add(this.companyLogoBox);
             this.Controls.Add(this.outputText);
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PaycheckUIOutput";
             this.Text = "Paycheck Preview";
             this.Load += new System.EventHandler(this.PaycheckUIOutput_Load);
